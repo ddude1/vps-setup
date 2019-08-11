@@ -49,6 +49,8 @@ function execAsUser() {
 function changeSSHConfig() {
     sudo sed -re 's/^(\#?)(PasswordAuthentication)([[:space:]]+)yes/\2\3no/' -i."$(echo 'old')" /etc/ssh/sshd_config
     sudo sed -re 's/^(\#?)(PermitRootLogin)([[:space:]]+)(.*)/PermitRootLogin no/' -i /etc/ssh/sshd_config
+    sudo sed -re 's/^(\#?)(ChallengeResponseAuthentication)([[:space:]]+)yes/\2\3no/' -i."$(echo 'old')" /etc/ssh/sshd_config
+    sudo sed -re 's/^(\#?)(UsePAM)([[:space:]]+)yes/\2\3no/' -i."$(echo 'old')" /etc/ssh/sshd_config
 }
 
 # Setup the Uncomplicated Firewall
