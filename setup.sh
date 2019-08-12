@@ -2,6 +2,10 @@
 
 set -e
 
+function checkApps() {
+    echo "Checking if common apps are installed"
+}
+
 function getCurrentDir() {
     local current_dir="${BASH_SOURCE%/*}"
     if [[ ! -d "${current_dir}" ]]; then current_dir="$PWD"; fi
