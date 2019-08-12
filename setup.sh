@@ -2,6 +2,15 @@
 
 set -e
 
+# Check if a few common applications are installed
+# Exit showing the way to solve if they aren't
+function checkApps() {
+   DEPEN="$(which curl && which htop && which screen && which git && which sudo && which ufw)"
+    [ $? -ne 0 ] && {
+	    echo "Are you using Debian or Ubuntu Minimal? If so, run first.sh before running this script" ;
+	    exit 1 ;
+}
+
 function checkApps() {
     echo "Checking if common apps are installed"
 }
