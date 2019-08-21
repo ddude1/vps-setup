@@ -1,7 +1,7 @@
-# Bash setup script for Ubuntu servers
-[![Build Status](https://travis-ci.org/jasonheecs/ubuntu-server-setup.svg?branch=master)](https://travis-ci.org/jasonheecs/ubuntu-server-setup)
+# Bash setup script for Linux (Debian-based) servers
 
-This is a setup script to automate the setup and provisioning of Ubuntu servers. It does the following:
+
+This is a setup script to automate the setup and provisioning of Linux (Debian-based) servers. It does the following:
 * Adds a new user account with sudo access
 * Adds a public ssh key for the new user account
 * Disables password authentication to the server
@@ -10,6 +10,7 @@ This is a setup script to automate the setup and provisioning of Ubuntu servers.
 * Create Swap file based on machine's installed memory
 * Setup the timezone for the server (Default to "America/Sao_Paulo")
 * Install Network Time Protocol
+
 
 # Installation
 SSH into your server and install git if it is not installed:
