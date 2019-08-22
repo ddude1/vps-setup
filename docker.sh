@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#install docker and docker-compose
+#install docker and docker-compose and ufw-docker
 
 #Get the script install from Docker website and execute it
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -14,3 +14,12 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 echo "Docker-compose was installed"
+
+#Install ufw-docker
+
+sudo wget -O /usr/local/bin/ufw-docker \
+  https://github.com/chaifeng/ufw-docker/raw/master/ufw-docker
+chmod +x /usr/local/bin/ufw-docker
+sudo ufw-docker install
+  
+echo "UFW-Docker was installed"
