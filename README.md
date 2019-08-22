@@ -11,6 +11,11 @@ This is a setup script to automate the setup and provisioning of Linux (Debian-b
 * Setup the timezone for the server (Default to "America/Sao_Paulo")
 * Install Network Time Protocol
 
+`first.sh`
+* Installs curl htop screen git sudo ufw in case the server does not have those yet.
+
+`docker.sh`
+* Installs docker, docker-compose and ufw-docker (a tool to fix ufw/docker integration)
 
 # Installation
 SSH into your server and install git if it is not installed:
