@@ -70,7 +70,8 @@ function createSwap() {
         swapmem=4
    fi
 
-   sudo fallocate -l "${swapmem}G" /swapfile
+   #sudo fallocate -l "${swapmem}G" /swapfile
+   sudo dd if=/dev/zero of=/swapfile bs="${swapmem}G"  count=1000
    sudo chmod 600 /swapfile
    sudo mkswap /swapfile
    sudo swapon /swapfile
