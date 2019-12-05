@@ -27,7 +27,7 @@ sudo apt-get install git
 Clone this repository into your home directory:
 ```bash
 cd ~
-git clone https://github.com/Oujiii/vps-setup.git
+git clone https://github.com/ddude1/vps-setup.git
 ```
 
 Run the setup script
