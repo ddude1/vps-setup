@@ -93,7 +93,7 @@ function setupTimezone() {
     echo -ne "Enter the timezone for the server (Default is 'America/Sao_Paulo'):\n" >&3
     read -r timezone
     if [ -z "${timezone}" ]; then
-        timezone="America/Sao_Paulo"
+        timezone="America/Toronto"
     fi
     setTimezone "${timezone}"
     echo "Timezone is set to $(cat /etc/timezone)" >&3
